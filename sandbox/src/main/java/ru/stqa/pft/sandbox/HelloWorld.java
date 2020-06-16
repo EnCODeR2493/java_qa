@@ -2,6 +2,27 @@ package ru.stqa.pft.sandbox;
 
 public class HelloWorld {
 	public static void main (String[] args) {
-		System.out.println ("Hey, World!");
+		hello("World");
+		hello("Guest");
+		hello("User 1");
+
+		double l = 5;
+		System.out.println("Площадь квадрата со стороной " + l + " = " + area(l));
+
+		double a = 4;
+		double b = 6;
+		System.out.println("Площадь прямоугольника со сторонами a = " + a + " и b = " + b + " = " + area(a, b));
+	}
+
+	public static void hello(String somebody) {
+		System.out.println ("Hey, " + somebody + "!");
+	}
+
+	public static double area (double len) {
+		return len * len;
+	}
+
+	public static double area (double a, double b){
+		return a * b;
 	}
 }
